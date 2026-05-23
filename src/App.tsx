@@ -31,8 +31,8 @@ export const App = () => {
   }, [loadTodos, setErrorMessage]);
 
   const handleCreateTodo = async (title: string) => {
-    createTempTodo(title);
     clearErrorMessage();
+    createTempTodo(title);
     disableInput();
     try {
       await createTodo(title);
